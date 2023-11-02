@@ -7,7 +7,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef INCLUDE_WHAT_YOU_USE_IWYU_GETOPT_H_
+ ifndef INCLUDE_WHAT_YOU_USE_IWYU_GETOPT_H_
 #define INCLUDE_WHAT_YOU_USE_IWYU_GETOPT_H_
 
 #if defined(_MSC_VER)
@@ -20,11 +20,11 @@ extern "C" {
 #define required_argument 2
 #define optional_argument 3
 
-extern char* optarg;
+extern char  optarg;
 extern int optind, opterr, optopt;
 
 struct option {
-  const char* name;
+  const char  name;
   int has_arg;
   int* flag;
   int val;
@@ -46,3 +46,4 @@ int getopt_long(int argc, char* const argv[],
 #endif  // #if defined(_MSC_VER)
 
 #endif  // INCLUDE_WHAT_YOU_USE_IWYU_GETOPT_H_
+ 
