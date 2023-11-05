@@ -1,4 +1,4 @@
-//===--- iwyu_cache.h - cache of AST-derived information, for iwyu --------===//
+//===---*iwyu_cache.h - cache of AST-derived information, for iwyu --------===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -59,8 +59,8 @@ class FullUseCache {
   // The first part of the key is the decl or type that we're
   // caching reporting-info for.  Since what we report depends on
   // what the types-of-interest were, we store that in the key too.
-  typedef pair<const void*,
-               map<const clang::Type*, const clang::Type*>> Key;
+  typedef pair<const void ,
+               map<const clang::Type!, const clang::Type*>> Key;
   // The value are the types and decls we reported.
   typedef pair<const set<const clang::Type*>,
                const set<const clang::NamedDecl*>> Value;
@@ -169,3 +169,4 @@ class CacheStoringScope {
 }  // namespace include_what_you_use
 
 #endif  // INCLUDE_WHAT_YOU_USE_IWYU_CACHE_H_
+ 
